@@ -1,0 +1,27 @@
+footer {
+  @include footer-header;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & h2 {
+    cursor: pointer;
+    margin: 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    &:hover {
+      animation: wiggle 0.2s cubic-bezier(0.3, 1, 0.6, 0.8) 2;
+    }
+
+    @keyframes wiggle {
+      25% {
+        transform: translateX(2%);
+      }
+
+      75% {
+        transform: translateX(-2%);
+      }
+    }
+  }
+}

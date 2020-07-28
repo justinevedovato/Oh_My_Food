@@ -1,92 +1,52 @@
-@import "./base/base";
-@import "./base/typography";
+@import "./utils/fonts";
 @import "./utils/variables";
 @import "./utils/mixins";
 
-body {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0;
-}
+@import "./base/base";
 
-header {
-  @include footer-header;
-  top: 0px;
-  text-align: center;
-  & h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: -0.1rem;
-  }
-}
+@import "./layouts/header";
+@import "./layouts/footer";
+
+@import "./components/button";
+
+@import "./pages/note-enchantee";
+@import "./pages/chic-a-la-francaise";
+@import "./pages/delice-des-papilles";
+@import "./pages/palette-du-gout";
 
 .menu {
   display: flex;
   &__box {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
     width: 300px;
     height: 450px;
     border-radius: 5px;
     box-shadow: 0px 0px 20px 2px $color-shadow;
     margin: 40px;
     text-align: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:hover > .wrapper {
+      transform: scale(1.5);
+      opacity: 0.5;
+    }
+    & > .wrapper {
+      display: inline-block;
+      align-items: center;
+    }
   }
-}
-
-.note {
-  background: $note-bg;
-}
-
-.chic {
-  background: $chic-bg;
-}
-
-.delice {
-  background: $delice-bg;
-}
-
-.palette {
-  background: $palette-bg;
 }
 
 .wrapper {
+  margin-top: 50%;
   display: flex;
   flex-direction: column;
-  position: relative;
-  top: 50%;
-  padding: 170px 20px;
-  transform: translate(0, -50%);
-  transform-origin: center center;
-  opacity: 1;
-  cursor: pointer;
-  // &:hover {
-  //   transform: scale(1.2);
-  //   opacity: 0.5;
-  //   transition: 0.3s ease;
-  //   padding: 0;
-  // }
-}
-
-.btn {
-  @include footer-header;
-  font-size: 1.4rem;
-  width: 260px;
-  height: 45px;
-  margin-bottom: 40px;
-  border: none;
-  border-radius: 8px;
-}
-
-footer {
-  @include footer-header;
-  position: fixed;
-  bottom: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  & h2 {
-    margin: 20px;
-    font-size: 1.2rem;
-    font-weight: 400;
-  }
+  align-items: center;
+  padding: auto;
+  transition: all 0.4s ease;
 }

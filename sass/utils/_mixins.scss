@@ -4,3 +4,23 @@
   color: $color-secondary;
   font-family: "Montserrat", Arial, sans-serif;
 }
+
+@mixin gradient-text($angle, $color1, $color2) {
+  color: $color1;
+  background: linear-gradient($angle, $color1, $color2);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+@mixin menu-cards-h3 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin: 0 0 10px;
+}
+
+@mixin menu-cards-p {
+  font-size: 2rem;
+  margin: 10px 0;
+  font-family: cursive;
+}

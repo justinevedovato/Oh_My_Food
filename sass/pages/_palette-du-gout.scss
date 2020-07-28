@@ -1,0 +1,17 @@
+// Onglet Menu
+
+.palette {
+  background: $palette-bg;
+  & h3 {
+    @include gradient-text(70deg, $palette-menu1, $palette-menu2);
+    @include menu-cards-h3;
+    font-family: "Kaushan Script", cursive;
+  }
+  & p {
+    @include menu-cards-p;
+    color: lighten($palette-menu1, 15%);
+    font-style: italic;
+  }
+}
+
+// Page Menu

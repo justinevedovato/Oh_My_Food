@@ -4,8 +4,10 @@
   "description": "Projet 3 OpenClassrooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "sass": "sass ./sass/main.scss:./css/style.css --style expanded",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/",
+    "build": "npm run sass && npm run prefix",
+    "watch": "onchange \"sass/**/*.scss\" -- npm run build"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,21 @@
   "bugs": {
     "url": "https://github.com/justinevedovato/Oh_My_Food/issues"
   },
-  "homepage": "https://github.com/justinevedovato/Oh_My_Food#readme"
+  "homepage": "https://github.com/justinevedovato/Oh_My_Food#readme",
+  "dependencies": {
+    "onchange": "^7.0.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 5 chrome version",
+      "last 5 firefox version",
+      "last 5 safari version",
+      "last 5 ie version"
+    ]
+  }
 }

@@ -1,0 +1,17 @@
+// Onglet Menu
+
+.chic {
+  background: $chic-bg;
+  & h3 {
+    @include gradient-text(45deg, $chic-menu1, $chic-menu2);
+    @include menu-cards-h3;
+    font-family: "Redressed", cursive;
+  }
+  & p {
+    @include menu-cards-p;
+    color: $chic-menu1;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+}
+
+// Page Menu

@@ -1,0 +1,18 @@
+// Onglet Menu
+
+.delice {
+  background: $delice-bg;
+  & h3 {
+    @include gradient-text(70deg, $delice-menu1, $delice-menu2);
+    @include menu-cards-h3;
+    font-family: "Rochester", cursive;
+    font-style: italic;
+  }
+  & p {
+    @include menu-cards-p;
+    color: $delice-menu2;
+    font-style: italic;
+  }
+}
+
+// Page Menu

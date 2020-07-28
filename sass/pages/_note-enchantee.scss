@@ -1,0 +1,22 @@
+// Onglet Menu
+
+.note {
+  background: $note-bg;
+  color: $note-menu;
+  & .fas {
+    @include gradient-text(45deg, $note-icon1, $note-icon2);
+    font-size: 2.7rem;
+    margin: 0;
+  }
+  & h3 {
+    @include menu-cards-h3;
+    font-family: "Devonshire", cursive;
+  }
+  & p {
+    @include menu-cards-p;
+    text-transform: uppercase;
+    font-family: "Itim", cursive;
+  }
+}
+
+// Page Menu
