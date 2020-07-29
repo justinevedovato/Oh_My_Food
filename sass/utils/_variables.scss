@@ -3,28 +3,43 @@
 $color-primary: #549c84;
 $color-secondary: #fdcb46;
 $color-shadow: #e5e3e2;
+$color-title: #353535;
 
 // Menu La Note Enchantée
 
 $note-bg: #fcdfdb;
-$note-menu: #42181e;
+$note-color: #42181e;
 $note-icon1: #f74651;
 $note-icon2: #fa9976;
 
 // Menu Le Chic à la française
 
 $chic-bg: #fff5fe;
-$chic-menu1: #c77412;
-$chic-menu2: #6f2dfd;
+$chic-color1: #d8801b;
+$chic-color2: #a56799;
+$chic-color3: #783aff;
 
 // Menu Le délice des papilles
 
-$delice-bg: #f9f9f9;
-$delice-menu1: #0222c5;
-$delice-menu2: #228bee;
+$delice-bg: #f8f8f8;
+$delice-color1: #0222c5;
+$delice-color2: #228bee;
 
 // Menu La palette du goût
 
 $palette-bg: #fdfffd;
-$palette-menu1: #2e722a;
-$palette-menu2: #bcff64;
+$palette-color1: #2e722a;
+$palette-color2: #bcff64;
+
+// Typographie
+
+$default-font: "Segoe Print", Tahoma, Verdana, sans-serif;
+
+$note-font: "Devonshire", cursive;
+
+$chic-font1: "Redressed", cursive;
+$chic-font2: "Times New Roman", Times, serif;
+
+$delice-font: "Rochester", cursive;
+
+$palette-font: "Kaushan Script", cursive;

@@ -1,35 +1,51 @@
 .btn {
   @include footer-header;
-  font-size: 1.4rem;
+  display: flex;
+  // align-items: baseline;
+  font-size: 1.3rem;
   width: 260px;
   height: 45px;
-  margin-bottom: 40px;
+  margin: 20px 0 100px;
   border: none;
   border-radius: 8px;
-  & span {
-    background-color: #fff;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 5px;
-    animation: bounce 0.5s ease-in infinite;
-    &:nth-of-type(2) {
-      animation-delay: 0.1s;
-    }
+  & p {
+    margin: auto 10px auto 10px;
+  }
+  & .dots {
+    display: flex;
+    height: 60px;
+    margin-bottom: 2px;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    line-height: 1rem;
 
-    &:nth-of-type(3) {
-      animation-delay: 0.2s;
-    }
-
-    @keyframes bounce {
-      0%,
-      100% {
-        transform: translateY(0);
+    & span {
+      display: inline;
+      margin: 0 2px;
+      position: relative;
+      opacity: 0;
+      animation: blink 1.3s ease infinite both;
+      &:nth-of-type(2) {
+        animation-delay: 0.2s;
       }
 
-      50% {
-        transform: translateY(-10px);
+      &:nth-of-type(3) {
+        animation-delay: 0.4s;
       }
     }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
   }
 }

@@ -1,18 +1,37 @@
-// Onglet Menu
+// Vignette Menu
 
 .delice {
-  background: $delice-bg;
+  @include menu-vignettes(
+    $delice-bg,
+    $delice-color2,
+    $delice-font,
+    $default-font
+  );
   & h3 {
-    @include gradient-text(70deg, $delice-menu1, $delice-menu2);
-    @include menu-cards-h3;
-    font-family: "Rochester", cursive;
+    @include gradient-text(70deg, $delice-color1, $delice-color2);
     font-style: italic;
+    // Page Menu
   }
-  & p {
-    @include menu-cards-p;
-    color: $delice-menu2;
-    font-style: italic;
+  &__page {
+    @include menu-pages($delice-bg, black, $delice-font, $default-font);
+    & h3 {
+      @include gradient-text(45deg, $delice-color1, $delice-color2);
+      margin: 20px 10px 40px;
+      font-size: 3.5rem;
+      font-style: italic;
+    }
+    & h4 {
+      font-size: 1.1rem;
+      font-weight: normal;
+      margin: 45px 0 20px;
+    }
+    & ul {
+      font-size: 0.9rem;
+      margin: 15px 80px 30px;
+      line-height: 0.6rem;
+    }
+    & span {
+      font-size: 1.1rem;
+    }
   }
 }
-
-// Page Menu

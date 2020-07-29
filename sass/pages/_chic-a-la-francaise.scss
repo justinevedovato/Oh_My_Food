@@ -1,17 +1,35 @@
-// Onglet Menu
+// Vignette Menu
 
 .chic {
-  background: $chic-bg;
+  @include menu-vignettes($chic-bg, $chic-color1, $chic-font1, $chic-font2);
   & h3 {
-    @include gradient-text(45deg, $chic-menu1, $chic-menu2);
-    @include menu-cards-h3;
-    font-family: "Redressed", cursive;
+    @include gradient-text(45deg, $chic-color1, $chic-color3);
   }
   & p {
-    @include menu-cards-p;
-    color: $chic-menu1;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+  }
+  // Page Menu
+  &__page {
+    @include menu-pages($chic-bg, $chic-color1, $chic-font1, $chic-font2);
+    & h3 {
+      @include gradient-text(45deg, $chic-color1, $chic-color3);
+      margin: 30px 0 70px;
+      font-size: 3rem;
+    }
+    & h4 {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    & ul {
+      font-size: 1.1rem;
+      margin: 50px 70px;
+      line-height: 0.7rem;
+    }
+    &--2 {
+      color: $chic-color2;
+    }
+    &--3 {
+      color: $chic-color3;
+    }
   }
 }
-
-// Page Menu

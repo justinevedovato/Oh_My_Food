@@ -1,22 +1,49 @@
-// Onglet Menu
+// Vignette Menu
 
 .note {
-  background: $note-bg;
-  color: $note-menu;
+  @include menu-vignettes($note-bg, $note-color, $note-font, $default-font);
   & .fas {
     @include gradient-text(45deg, $note-icon1, $note-icon2);
-    font-size: 2.7rem;
+    font-size: 2.8rem;
+    padding: 5px;
     margin: 0;
   }
-  & h3 {
-    @include menu-cards-h3;
-    font-family: "Devonshire", cursive;
-  }
   & p {
-    @include menu-cards-p;
     text-transform: uppercase;
-    font-family: "Itim", cursive;
+    font-weight: bold;
+  }
+
+  // Page Menu
+  &__page {
+    @include menu-pages($note-bg, $note-color, $note-font, $default-font);
+    & .fas {
+      @include gradient-text(45deg, $note-icon1, $note-icon2);
+      font-size: 4rem;
+      margin: 15px;
+      padding: 5px;
+    }
+    & h3 {
+      font-size: 3rem;
+    }
+    & h4 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+    & ul {
+      font-size: 1rem;
+      line-height: 0.7rem;
+      margin: 20px 35px 40px;
+    }
+    & span {
+      font-weight: bold;
+    }
+    &__title--bottom {
+      transform: scale(0.7);
+      position: relative;
+      display: flex;
+      align-items: baseline;
+      text-align: center;
+      margin: 0;
+    }
   }
 }
-
-// Page Menu

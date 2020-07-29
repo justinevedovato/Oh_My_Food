@@ -1,16 +1,40 @@
-// Onglet Menu
+// Vignette Menu
 
 .palette {
-  background: $palette-bg;
+  @include menu-vignettes(
+    $palette-bg,
+    $palette-color1,
+    $palette-font,
+    $default-font
+  );
   & h3 {
-    @include gradient-text(70deg, $palette-menu1, $palette-menu2);
-    @include menu-cards-h3;
-    font-family: "Kaushan Script", cursive;
+    @include gradient-text(70deg, $palette-color1, $palette-color2);
   }
   & p {
-    @include menu-cards-p;
-    color: lighten($palette-menu1, 15%);
-    font-style: italic;
+    color: lighten($palette-color1, 15%);
+  }
+  &__page {
+    @include menu-pages($palette-bg, black, $palette-font, $default-font);
+    & h3 {
+      @include gradient-text(70deg, $palette-color1, $palette-color2);
+      margin: 40px 10px;
+      font-size: 3.5rem;
+      font-style: italic;
+      width: auto;
+    }
+    & h4 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin: 45px 0 20px;
+    }
+    & ul {
+      font-size: 0.9rem;
+      margin: 15px 70px 30px;
+      line-height: 0.6rem;
+    }
+    & span {
+      font-size: 1.1rem;
+    }
   }
 }
 

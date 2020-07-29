@@ -9,18 +9,68 @@
   color: $color1;
   background: linear-gradient($angle, $color1, $color2);
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text;
   display: inline-block;
 }
 
-@mixin menu-cards-h3 {
-  font-size: 1.8rem;
-  font-weight: normal;
-  margin: 0 0 10px;
+// @mixin menu-cards-h3($font) {
+//   font-family: $font;
+//   font-size: 1.8rem;
+//   font-weight: normal;
+//   margin: 0 0 10px;
+// }
+
+// @mixin menu-cards-p($font) {
+//   font-family: $font;
+//   font-size: 2rem;
+//   margin: 10px 0;
+// }
+
+@mixin menu-vignettes($bg, $color, $font1, $font2) {
+  background: $bg;
+  color: $color;
+  & h3 {
+    font-family: $font1;
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin: 0 0 10px;
+    padding: 0 10px;
+  }
+  & p {
+    font-family: $font2;
+    font-size: 2rem;
+    margin: 10px 0;
+  }
 }
 
-@mixin menu-cards-p {
-  font-size: 2rem;
-  margin: 10px 0;
-  font-family: cursive;
+@mixin menu-pages($bg, $color, $font1, $font2) {
+  background: $bg;
+  color: $color;
+  box-shadow: 0px 0px 20px 4px $color-shadow;
+  text-align: center;
+  padding: 30px;
+  width: 780px;
+  min-height: 1000px;
+  margin: 10px 10px 100px 10px;
+  & h3 {
+    margin-top: 0;
+    font-family: $font1;
+    font-weight: normal;
+    padding: 0 20px;
+  }
+  & h4 {
+    font-family: $font2;
+  }
+  & ul {
+    padding: 0;
+    font-family: $font2;
+  }
+  & li {
+    list-style-type: none;
+    display: flex;
+    align-items: baseline;
+  }
+  & span {
+    margin-left: auto;
+  }
 }
