@@ -1,13 +1,13 @@
 .btn {
   @include footer-header;
   display: flex;
-  // align-items: baseline;
   font-size: 1.3rem;
   width: 260px;
   height: 45px;
   margin: 20px 0 100px;
   border: none;
   border-radius: 8px;
+  overflow: hidden;
   & p {
     margin: auto 10px auto 10px;
   }

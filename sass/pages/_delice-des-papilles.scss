@@ -17,7 +17,7 @@
     & h3 {
       @include gradient-text(45deg, $delice-color1, $delice-color2);
       margin: 20px 10px 40px;
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-style: italic;
     }
     & h4 {
@@ -25,9 +25,50 @@
       font-weight: normal;
       margin: 45px 0 20px;
     }
+    &__break {
+      margin-bottom: 30px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    & .break {
+      width: 240px;
+      height: 100px;
+      margin-top: 20px;
+      clip-path: polygon(
+        3% 44%,
+        4% 47%,
+        5% 48%,
+        7% 49%,
+        93% 50%,
+        96% 54%,
+        8% 53%,
+        5% 52%,
+        3% 50%,
+        3% 48%,
+        2% 44%
+      );
+      &--left {
+        margin-right: auto;
+      }
+      &--right {
+        margin-left: auto;
+        transform: scale(-1, 1);
+      }
+      &--1 {
+        background-color: $delice-color1;
+      }
+      &--2 {
+        background-color: $delice-color3;
+      }
+      &--3 {
+        background-color: $delice-color2;
+      }
+    }
     & ul {
       font-size: 0.9rem;
-      margin: 15px 80px 30px;
+      margin: 25px 80px 30px;
       line-height: 0.6rem;
     }
     & span {

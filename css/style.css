@@ -69,14 +69,14 @@ footer h2, footer a {
   font-weight: 400;
 }
 footer h2:hover, footer a:hover {
-  animation: wiggle 0.2s cubic-bezier(0.3, 1, 0.6, 0.8) 2;
+  animation: wiggle 0.2s cubic-bezier(0.3, 1, 0.6, 0.8) 3;
 }
 @keyframes wiggle {
   25% {
-    transform: translateX(2%);
+    transform: rotate(-5deg);
   }
   75% {
-    transform: translateX(-2%);
+    transform: rotate(5deg);
   }
 }
 
@@ -92,6 +92,7 @@ footer h2:hover, footer a:hover {
   margin: 20px 0 100px;
   border: none;
   border-radius: 8px;
+  overflow: hidden;
 }
 .btn p {
   margin: auto 10px auto 10px;
@@ -207,6 +208,25 @@ footer h2:hover, footer a:hover {
   font-size: 1.5rem;
   margin: 0;
 }
+.note__page__break {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.note__page .break {
+  width: 200px;
+  height: 90px;
+  clip-path: polygon(2% 49%, 10% 47%, 16% 47%, 21% 47%, 28% 47%, 33% 47%, 37% 47%, 41% 46%, 45% 46%, 50% 46%, 55% 46%, 59% 46%, 64% 45%, 69% 45%, 74% 46%, 78% 46%, 82% 45%, 88% 45%, 91% 44%, 93% 45%, 96% 45%, 100% 45%, 100% 47%, 99% 49%, 98% 50%, 96% 50%, 93% 50%, 90% 49%, 87% 49%, 84% 50%, 81% 51%, 78% 51%, 76% 50%, 72% 50%, 70% 50%, 66% 51%, 64% 50%, 61% 50%, 59% 50%, 54% 50%, 49% 51%, 46% 51%, 43% 51%, 39% 51%, 36% 51%, 33% 50%, 30% 51%, 27% 51%, 24% 51%, 21% 51%, 18% 51%, 16% 50%, 14% 51%, 11% 51%, 10% 51%, 8% 51%, 6% 51%, 4% 50%, 3% 50%, 1% 50%);
+  background-color: currentColor;
+}
+.note__page .break--left {
+  margin-right: auto;
+}
+.note__page .break--right {
+  margin-left: auto;
+  transform: scale(-1, 1);
+}
 .note__page ul {
   font-size: 1rem;
   line-height: 0.7rem;
@@ -287,16 +307,36 @@ footer h2:hover, footer a:hover {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   display: inline-block;
-  margin: 30px 0 70px;
+  margin: 40px 0 70px;
   font-size: 3rem;
 }
 .chic__page h4 {
   font-weight: bold;
   font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+}
+.chic__page__break {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.chic__page .break {
+  width: 245px;
+  height: 100px;
+  clip-path: polygon(0% 49%, 62% 46%, 73% 43%, 76% 45%, 80% 47%, 83% 48%, 87% 49%, 90% 49%, 86% 50%, 82% 51%, 79% 52%, 76% 54%, 73% 56%, 63% 53%);
+  background-color: currentColor;
+}
+.chic__page .break--left {
+  margin-right: auto;
+}
+.chic__page .break--right {
+  margin-left: auto;
+  transform: scale(-1, 1);
 }
 .chic__page ul {
   font-size: 1.1rem;
-  margin: 50px 70px;
+  margin: 20px 70px;
   line-height: 0.7rem;
 }
 .chic__page--2 {
@@ -368,7 +408,7 @@ footer h2:hover, footer a:hover {
   -webkit-background-clip: text;
   display: inline-block;
   margin: 20px 10px 40px;
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-style: italic;
 }
 .delice__page h4 {
@@ -376,9 +416,38 @@ footer h2:hover, footer a:hover {
   font-weight: normal;
   margin: 45px 0 20px;
 }
+.delice__page__break {
+  margin-bottom: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.delice__page .break {
+  width: 240px;
+  height: 100px;
+  margin-top: 20px;
+  clip-path: polygon(3% 44%, 4% 47%, 5% 48%, 7% 49%, 93% 50%, 96% 54%, 8% 53%, 5% 52%, 3% 50%, 3% 48%, 2% 44%);
+}
+.delice__page .break--left {
+  margin-right: auto;
+}
+.delice__page .break--right {
+  margin-left: auto;
+  transform: scale(-1, 1);
+}
+.delice__page .break--1 {
+  background-color: #0222c5;
+}
+.delice__page .break--2 {
+  background-color: #1b67da;
+}
+.delice__page .break--3 {
+  background-color: #228bee;
+}
 .delice__page ul {
   font-size: 0.9rem;
-  margin: 15px 80px 30px;
+  margin: 25px 80px 30px;
   line-height: 0.6rem;
 }
 .delice__page span {
@@ -458,9 +527,30 @@ footer h2:hover, footer a:hover {
   font-weight: normal;
   margin: 45px 0 20px;
 }
+.palette__page__break {
+  height: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.palette__page .break {
+  width: 240px;
+  height: 150px;
+  margin-top: 20px;
+  clip-path: polygon(1% 49%, 11% 49%, 18% 49%, 24% 50%, 31% 50%, 42% 50%, 51% 50%, 58% 51%, 68% 51%, 75% 51%, 79% 51%, 85% 51%, 90% 51%, 94% 52%, 98% 53%, 96% 54%, 89% 55%, 85% 55%, 82% 55%, 76% 55%, 70% 54%, 63% 55%, 58% 55%, 52% 55%, 43% 54%, 37% 54%, 34% 54%, 31% 54%, 27% 54%, 23% 54%, 20% 54%, 17% 54%, 13% 53%, 10% 53%, 7% 53%, 4% 53%, 3% 52%, 1% 51%);
+  background: linear-gradient(45deg, #2e722a, #bcff64);
+}
+.palette__page .break--left {
+  margin-right: auto;
+}
+.palette__page .break--right {
+  margin-left: auto;
+  transform: scale(-1, 1);
+}
 .palette__page ul {
   font-size: 0.9rem;
-  margin: 15px 70px 30px;
+  margin: 25px 70px 30px;
   line-height: 0.6rem;
 }
 .palette__page span {
