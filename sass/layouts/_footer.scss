@@ -5,9 +5,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  & h2,
   & a {
-    cursor: pointer;
     color: inherit;
     text-decoration: inherit;
     margin: 20px;

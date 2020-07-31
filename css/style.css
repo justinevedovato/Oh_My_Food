@@ -48,6 +48,10 @@ header h1 {
   font-weight: 700;
   letter-spacing: -0.1rem;
 }
+header a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 footer {
   width: 100%;
@@ -60,15 +64,14 @@ footer {
   flex-direction: row;
   justify-content: space-between;
 }
-footer h2, footer a {
-  cursor: pointer;
+footer a {
   color: inherit;
   text-decoration: inherit;
   margin: 20px;
   font-size: 1.2rem;
   font-weight: 400;
 }
-footer h2:hover, footer a:hover {
+footer a:hover {
   animation: wiggle 0.2s cubic-bezier(0.3, 1, 0.6, 0.8) 3;
 }
 @keyframes wiggle {
@@ -91,6 +94,7 @@ footer h2:hover, footer a:hover {
   height: 45px;
   margin: 20px 0 100px;
   border: none;
+  outline: none;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -160,6 +164,9 @@ footer h2:hover, footer a:hover {
   text-transform: uppercase;
   font-weight: bold;
 }
+.note .wrapper {
+  transform: translateY(-20%);
+}
 .note__page {
   background: #fcdfdb;
   color: #42181e;
@@ -207,6 +214,22 @@ footer h2:hover, footer a:hover {
 .note__page h4 {
   font-size: 1.5rem;
   margin: 0;
+  position: relative;
+}
+.note__page h4:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.note__page h4:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 .note__page__break {
   height: 50px;
@@ -237,11 +260,16 @@ footer h2:hover, footer a:hover {
 }
 .note__page__title--bottom {
   transform: scale(0.7);
-  position: relative;
   display: flex;
   align-items: baseline;
   text-align: center;
-  margin: 0;
+  align-content: space-around;
+}
+.note__page__title--bottom .fas {
+  margin-left: auto;
+}
+.note__page__title--bottom h3 {
+  margin-right: auto;
 }
 
 .chic {
@@ -314,6 +342,22 @@ footer h2:hover, footer a:hover {
   font-weight: bold;
   font-size: 1.2rem;
   letter-spacing: 0.05rem;
+  position: relative;
+}
+.chic__page h4:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.chic__page h4:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 .chic__page__break {
   height: 50px;
@@ -415,6 +459,22 @@ footer h2:hover, footer a:hover {
   font-size: 1.1rem;
   font-weight: normal;
   margin: 45px 0 20px;
+  position: relative;
+}
+.delice__page h4:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.delice__page h4:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 .delice__page__break {
   margin-bottom: 30px;
@@ -526,6 +586,22 @@ footer h2:hover, footer a:hover {
   font-size: 1rem;
   font-weight: normal;
   margin: 45px 0 20px;
+  position: relative;
+}
+.palette__page h4:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.palette__page h4:hover:before {
+  visibility: visible;
+  width: 100%;
 }
 .palette__page__break {
   height: 50px;

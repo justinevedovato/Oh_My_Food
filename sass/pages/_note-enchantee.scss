@@ -12,6 +12,9 @@
     text-transform: uppercase;
     font-weight: bold;
   }
+  & .wrapper {
+    transform: translateY(-20%);
+  }
 
   // Page Menu
   &__page {
@@ -28,6 +31,7 @@
     & h4 {
       font-size: 1.5rem;
       margin: 0;
+      @include underline;
     }
     &__break {
       height: 50px;
@@ -119,11 +123,16 @@
     }
     &__title--bottom {
       transform: scale(0.7);
-      position: relative;
       display: flex;
       align-items: baseline;
       text-align: center;
-      margin: 0;
+      align-content: space-around;
+      & .fas {
+        margin-left: auto;
+      }
+      & h3 {
+        margin-right: auto;
+      }
     }
   }
 }

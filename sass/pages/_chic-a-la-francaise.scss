@@ -20,6 +20,7 @@
       font-weight: bold;
       font-size: 1.2rem;
       letter-spacing: 0.05rem;
+      @include underline;
     }
     &__break {
       height: 50px;

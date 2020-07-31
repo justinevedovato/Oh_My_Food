@@ -26,6 +26,7 @@
       font-size: 1rem;
       font-weight: normal;
       margin: 45px 0 20px;
+      @include underline;
     }
     &__break {
       height: 50px;
