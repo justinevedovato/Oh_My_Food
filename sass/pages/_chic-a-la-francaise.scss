@@ -2,61 +2,33 @@
 
 .chic {
   @include menu-vignettes($chic-bg, $chic-color1, $chic-font1, $chic-font2);
-  & h3 {
+  h3 {
     @include gradient-text(45deg, $chic-color1, $chic-color3);
   }
-  & p {
+  p {
     font-weight: bold;
   }
   // Page Menu
   &__page {
     @include menu-pages($chic-bg, $chic-color1, $chic-font1, $chic-font2);
-    & h3 {
+    h3 {
       @include gradient-text(45deg, $chic-color1, $chic-color3);
       margin: 40px 0 70px;
       font-size: 3rem;
     }
-    & h4 {
+    h4 {
       font-weight: bold;
       font-size: 1.2rem;
       letter-spacing: 0.05rem;
+      margin-top: 20px;
       @include underline;
     }
-    &__break {
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    & .break {
-      width: 245px;
+    .break {
       height: 100px;
-      clip-path: polygon(
-        0% 49%,
-        62% 46%,
-        73% 43%,
-        76% 45%,
-        80% 47%,
-        83% 48%,
-        87% 49%,
-        90% 49%,
-        86% 50%,
-        82% 51%,
-        79% 52%,
-        76% 54%,
-        73% 56%,
-        63% 53%
-      );
+      clip-path: $chic-path;
       background-color: currentColor;
-      &--left {
-        margin-right: auto;
-      }
-      &--right {
-        margin-left: auto;
-        transform: scale(-1, 1);
-      }
     }
-    & ul {
+    ul {
       font-size: 1.1rem;
       margin: 20px 70px;
       line-height: 0.7rem;
@@ -66,6 +38,42 @@
     }
     &--3 {
       color: $chic-color3;
+    }
+  }
+
+  // Version tablette
+  @media (max-width: 850px) {
+    @include responsive-smaller;
+    &__page {
+      ul {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  // Version mobile
+  @media (max-width: 550px) {
+    @include responsive-mobile;
+    &__page {
+      h4 {
+        letter-spacing: 0;
+      }
+      &__break {
+        margin-bottom: 5px;
+      }
+      ul {
+        margin: 0 30px;
+        font-size: 0.7rem;
+        line-height: 1rem;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      span {
+        margin: 5px 0 10px;
+      }
+      &--3 {
+        margin-bottom: 20px;
+      }
     }
   }
 }

@@ -16,14 +16,14 @@
 @mixin menu-vignettes($bg, $color, $font1, $font2) {
   background: $bg;
   color: $color;
-  & h3 {
+  h3 {
     font-family: $font1;
     font-size: 1.8rem;
     font-weight: normal;
     margin: 0 0 10px;
     padding: 0 10px;
   }
-  & p {
+  p {
     font-family: $font2;
     font-size: 2rem;
     margin: 10px 0;
@@ -35,30 +35,122 @@
   color: $color;
   box-shadow: 0px 0px 20px 4px $color-shadow;
   text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding: 30px;
   width: 780px;
   min-height: 1000px;
   margin: 10px 10px 100px 10px;
-  & h3 {
-    margin-top: 0;
+  section {
+    width: 100%;
+  }
+  &__break {
+    height: 40px;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .break {
+    width: 240px;
+    height: 150px;
+    &--right {
+      transform: scale(-1, 1);
+    }
+  }
+  h3 {
+    padding: 0 10px;
+    margin: 0 0 35px;
     font-family: $font1;
     font-weight: normal;
-    padding: 0 20px;
   }
-  & h4 {
+  h4 {
     font-family: $font2;
+    font-weight: normal;
+    margin: 45px 0 20px;
+    font-size: 1rem;
   }
-  & ul {
+  ul {
     padding: 0;
     font-family: $font2;
   }
-  & li {
+  li {
     list-style-type: none;
     display: flex;
     align-items: baseline;
   }
-  & span {
+  span {
     margin-left: auto;
+  }
+}
+
+@mixin responsive-smaller {
+  &__page {
+    box-shadow: 0px 0px 15px 4px $color-shadow;
+    padding: 15px;
+    width: 500px;
+    min-height: 800px;
+    margin: 10px 10px 100px 10px;
+    h3 {
+      font-size: 2rem;
+      margin: 30px 0;
+    }
+    h4 {
+      font-size: 1rem;
+    }
+    ul {
+      padding: 0;
+      font-size: 0.7rem;
+      margin: 15px 15px 20px;
+    }
+    span {
+      font-size: 0.8rem;
+    }
+    .break {
+      width: 130px;
+      height: 90px;
+    }
+  }
+}
+
+@mixin responsive-mobile {
+  &__page {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 290px;
+    height: auto;
+    margin: 10px 5px 100px;
+    h3 {
+      font-size: 1.5rem;
+      margin: 15px 0 20px;
+    }
+    h4 {
+      font-size: 0.8rem;
+    }
+    ul {
+      font-size: 0.7rem;
+      margin: 15px 15px 20px;
+      li {
+        flex-direction: column;
+        align-items: center;
+      }
+      p {
+        line-height: 1rem;
+      }
+    }
+    span {
+      font-size: inherit;
+      margin: 0 auto 15px;
+    }
+    &__break {
+      margin: 0 0 20px;
+    }
+    .break {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 

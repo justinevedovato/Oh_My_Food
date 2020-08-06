@@ -1,103 +1,52 @@
-// Vignette Menu
-
 .palette {
+  // Vignette Menu
   @include menu-vignettes(
     $palette-bg,
     $palette-color1,
     $palette-font,
     $default-font
   );
-  & h3 {
+  h3 {
     @include gradient-text(70deg, $palette-color1, $palette-color2);
   }
-  & p {
+  p {
     color: lighten($palette-color1, 15%);
   }
+  // Page menu
   &__page {
     @include menu-pages($palette-bg, black, $palette-font, $default-font);
-    & h3 {
+    h3 {
       @include gradient-text(70deg, $palette-color1, $palette-color2);
       margin: 40px 10px;
       font-size: 3.5rem;
       font-style: italic;
       width: auto;
     }
-    & h4 {
-      font-size: 1rem;
-      font-weight: normal;
-      margin: 45px 0 20px;
+    h4 {
       @include underline;
     }
-    &__break {
-      height: 50px;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    & .break {
-      width: 240px;
-      height: 150px;
+    .break {
       margin-top: 20px;
-      clip-path: polygon(
-        1% 49%,
-        11% 49%,
-        18% 49%,
-        24% 50%,
-        31% 50%,
-        42% 50%,
-        51% 50%,
-        58% 51%,
-        68% 51%,
-        75% 51%,
-        79% 51%,
-        85% 51%,
-        90% 51%,
-        94% 52%,
-        98% 53%,
-        96% 54%,
-        89% 55%,
-        85% 55%,
-        82% 55%,
-        76% 55%,
-        70% 54%,
-        63% 55%,
-        58% 55%,
-        52% 55%,
-        43% 54%,
-        37% 54%,
-        34% 54%,
-        31% 54%,
-        27% 54%,
-        23% 54%,
-        20% 54%,
-        17% 54%,
-        13% 53%,
-        10% 53%,
-        7% 53%,
-        4% 53%,
-        3% 52%,
-        1% 51%
-      );
+      clip-path: $palette-path;
       background: linear-gradient(45deg, $palette-color1, $palette-color2);
-      &--left {
-        margin-right: auto;
-      }
-      &--right {
-        margin-left: auto;
-        transform: scale(-1, 1);
-      }
     }
 
-    & ul {
+    ul {
       font-size: 0.9rem;
       margin: 25px 70px 30px;
       line-height: 0.6rem;
     }
-    & span {
+    span {
       font-size: 1.1rem;
     }
   }
-}
 
-// Page Menu
+  // Version tablette
+  @media (max-width: 850px) {
+    @include responsive-smaller;
+  }
+  // Version mobile
+  @media (max-width: 550px) {
+    @include responsive-mobile;
+  }
+}

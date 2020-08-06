@@ -4,15 +4,15 @@
   font-size: 1.3rem;
   width: 260px;
   height: 45px;
-  margin: 20px 0 100px;
+  margin: 20px 0 150px;
   border: none;
   outline: none;
   border-radius: 8px;
   overflow: hidden;
-  & p {
+  p {
     margin: auto 10px auto 10px;
   }
-  & .dots {
+  .dots {
     display: flex;
     height: 60px;
     margin-bottom: 2px;
@@ -20,7 +20,7 @@
     letter-spacing: 0.1rem;
     line-height: 1rem;
 
-    & span {
+    span {
       display: inline;
       margin: 0 2px;
       position: relative;
@@ -34,6 +34,13 @@
         animation-delay: 0.4s;
       }
     }
+  }
+  @media screen and (max-width: 850px) {
+    // font-size: 1em;
+    margin-bottom: 100px;
+    // width: 230px;
+    // height: 35px;
+    transform: scale(0.7);
   }
 }
 

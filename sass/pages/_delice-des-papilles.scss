@@ -1,62 +1,33 @@
-// Vignette Menu
-
 .delice {
+  // Vignette Menu
   @include menu-vignettes(
     $delice-bg,
     $delice-color2,
     $delice-font,
     $default-font
   );
-  & h3 {
+  h3 {
     @include gradient-text(70deg, $delice-color1, $delice-color2);
     font-style: italic;
     // Page Menu
   }
   &__page {
     @include menu-pages($delice-bg, black, $delice-font, $default-font);
-    & h3 {
+    h3 {
       @include gradient-text(45deg, $delice-color1, $delice-color2);
       margin: 20px 10px 40px;
       font-size: 4rem;
       font-style: italic;
     }
-    & h4 {
+    h4 {
       font-size: 1.1rem;
       font-weight: normal;
-      margin: 45px 0 20px;
+      // margin: 45px 0 20px;
       @include underline;
     }
-    &__break {
-      margin-bottom: 30px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    & .break {
-      width: 240px;
-      height: 100px;
+    .break {
       margin-top: 20px;
-      clip-path: polygon(
-        3% 44%,
-        4% 47%,
-        5% 48%,
-        7% 49%,
-        93% 50%,
-        96% 54%,
-        8% 53%,
-        5% 52%,
-        3% 50%,
-        3% 48%,
-        2% 44%
-      );
-      &--left {
-        margin-right: auto;
-      }
-      &--right {
-        margin-left: auto;
-        transform: scale(-1, 1);
-      }
+      clip-path: $delice-path;
       &--1 {
         background-color: $delice-color1;
       }
@@ -67,13 +38,32 @@
         background-color: $delice-color2;
       }
     }
-    & ul {
+    ul {
       font-size: 0.9rem;
       margin: 25px 80px 30px;
       line-height: 0.6rem;
     }
-    & span {
+    span {
       font-size: 1.1rem;
+    }
+  }
+
+  // Version tablette
+  @media (max-width: 850px) {
+    @include responsive-smaller;
+    &__page {
+      h3 {
+        font-size: 3rem;
+      }
+    }
+  }
+  // Version mobile
+  @media (max-width: 550px) {
+    @include responsive-mobile;
+    &__page {
+      h3 {
+        font-size: 2rem;
+      }
     }
   }
 }

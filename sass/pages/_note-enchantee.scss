@@ -1,109 +1,38 @@
-// Vignette Menu
-
 .note {
+  // Vignette Menu
   @include menu-vignettes($note-bg, $note-color, $note-font, $default-font);
-  & .fas {
+  .fas {
     @include gradient-text(45deg, $note-icon1, $note-icon2);
     font-size: 2.8rem;
     padding: 5px;
     margin: 0;
   }
-  & p {
+  p {
     text-transform: uppercase;
     font-weight: bold;
-  }
-  & .wrapper {
-    transform: translateY(-20%);
   }
 
   // Page Menu
   &__page {
     @include menu-pages($note-bg, $note-color, $note-font, $default-font);
-    & .fas {
+    .fas {
       @include gradient-text(45deg, $note-icon1, $note-icon2);
       font-size: 4rem;
-      margin: 15px;
+      margin: 15px 0 5px;
       padding: 5px;
     }
-    & h3 {
+    h3 {
       font-size: 3rem;
     }
-    & h4 {
+    h4 {
       font-size: 1.5rem;
       margin: 0;
       @include underline;
     }
-    &__break {
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    & .break {
+    .break {
       width: 200px;
       height: 90px;
-      clip-path: polygon(
-        2% 49%,
-        10% 47%,
-        16% 47%,
-        21% 47%,
-        28% 47%,
-        33% 47%,
-        37% 47%,
-        41% 46%,
-        45% 46%,
-        50% 46%,
-        55% 46%,
-        59% 46%,
-        64% 45%,
-        69% 45%,
-        74% 46%,
-        78% 46%,
-        82% 45%,
-        88% 45%,
-        91% 44%,
-        93% 45%,
-        96% 45%,
-        100% 45%,
-        100% 47%,
-        99% 49%,
-        98% 50%,
-        96% 50%,
-        93% 50%,
-        90% 49%,
-        87% 49%,
-        84% 50%,
-        81% 51%,
-        78% 51%,
-        76% 50%,
-        72% 50%,
-        70% 50%,
-        66% 51%,
-        64% 50%,
-        61% 50%,
-        59% 50%,
-        54% 50%,
-        49% 51%,
-        46% 51%,
-        43% 51%,
-        39% 51%,
-        36% 51%,
-        33% 50%,
-        30% 51%,
-        27% 51%,
-        24% 51%,
-        21% 51%,
-        18% 51%,
-        16% 50%,
-        14% 51%,
-        11% 51%,
-        10% 51%,
-        8% 51%,
-        6% 51%,
-        4% 50%,
-        3% 50%,
-        1% 50%
-      );
+      clip-path: $note-path;
       background-color: currentColor;
       &--left {
         margin-right: auto;
@@ -113,25 +42,53 @@
         transform: scale(-1, 1);
       }
     }
-    & ul {
+    ul {
       font-size: 1rem;
       line-height: 0.7rem;
       margin: 20px 35px 40px;
     }
-    & span {
+    span {
       font-weight: bold;
     }
     &__title--bottom {
       transform: scale(0.7);
       display: flex;
       align-items: baseline;
-      text-align: center;
-      align-content: space-around;
-      & .fas {
-        margin-left: auto;
+      justify-content: center;
+      .fas {
+        margin-right: 10px;
       }
-      & h3 {
-        margin-right: auto;
+    }
+  }
+
+  // Version tablette
+  @media (max-width: 850px) {
+    @include responsive-smaller;
+    &__page {
+      .fas {
+        font-size: 3rem;
+      }
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  // Version mobile
+  @media (max-width: 550px) {
+    @include responsive-mobile;
+    &__page {
+      .fas {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+      }
+      h3 {
+        margin-top: 5px;
+      }
+      &__title--bottom {
+        .fas {
+          margin-right: 10px;
+        }
       }
     }
   }
