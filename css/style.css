@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Devonshire&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rochester&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
@@ -225,7 +225,7 @@ body > footer a:hover {
   padding: 0 10px;
 }
 .note p {
-  font-family: "Segoe Print", cursive, Verdana, sans-serif;
+  font-family: "Merienda", Verdana, sans-serif;
   font-size: 2rem;
   margin: 10px 0;
 }
@@ -280,14 +280,14 @@ body > footer a:hover {
   font-weight: normal;
 }
 .note__page h4 {
-  font-family: "Segoe Print", cursive, Verdana, sans-serif;
+  font-family: "Merienda", Verdana, sans-serif;
   font-weight: normal;
   margin: 45px 0 20px;
   font-size: 1rem;
 }
 .note__page ul {
   padding: 0;
-  font-family: "Segoe Print", cursive, Verdana, sans-serif;
+  font-family: "Merienda", Verdana, sans-serif;
 }
 .note__page li {
   list-style-type: none;
@@ -674,7 +674,7 @@ body > footer a:hover {
   padding: 0 10px;
 }
 .delice p {
-  font-family: "Segoe Print", cursive, Verdana, sans-serif;
+  font-family: "Merienda", Verdana, sans-serif;
   font-size: 2rem;
   margin: 10px 0;
 }
@@ -723,14 +723,14 @@ body > footer a:hover {
   font-weight: normal;
 }
 .delice__page h4 {
-  font-family: "Segoe Print", cursive, Verdana, sans-serif;
+  font-family: "Merienda", Verdana, sans-serif;
   font-weight: normal;
   margin: 45px 0 20px;
   font-size: 1rem;
 }
 .delice__page ul {
   padding: 0;
-  font-family: "Segoe Print", cursive, Verdana, sans-serif;
+  font-family: "Merienda", Verdana, sans-serif;
 }
 .delice__page li {
   list-style-type: none;
@@ -877,7 +877,7 @@ body > footer a:hover {
   padding: 0 10px;
 }
 .palette p {
-  font-family: "Segoe Print", cursive, Verdana, sans-serif;
+  font-family: "Merienda", Verdana, sans-serif;
   font-size: 2rem;
   margin: 10px 0;
 }
@@ -928,14 +928,14 @@ body > footer a:hover {
   font-weight: normal;
 }
 .palette__page h4 {
-  font-family: "Segoe Print", cursive, Verdana, sans-serif;
+  font-family: "Merienda", Verdana, sans-serif;
   font-weight: normal;
   margin: 45px 0 20px;
   font-size: 1rem;
 }
 .palette__page ul {
   padding: 0;
-  font-family: "Segoe Print", cursive, Verdana, sans-serif;
+  font-family: "Merienda", Verdana, sans-serif;
 }
 .palette__page li {
   list-style-type: none;
