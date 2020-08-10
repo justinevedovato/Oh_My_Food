@@ -1,6 +1,6 @@
 .btn {
   @include footer-header;
-  display: flex;
+  display: inline-flex;
   font-size: 1.3rem;
   width: 260px;
   height: 45px;
@@ -14,7 +14,6 @@
   }
   .dots {
     display: flex;
-    height: 60px;
     margin-bottom: 2px;
     font-size: 3rem;
     letter-spacing: 0.1rem;
@@ -36,10 +35,7 @@
     }
   }
   @media screen and (max-width: 850px) {
-    // font-size: 1em;
     margin-bottom: 100px;
-    // width: 230px;
-    // height: 35px;
     transform: scale(0.7);
   }
 }

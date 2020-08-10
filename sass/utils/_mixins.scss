@@ -2,7 +2,7 @@
   width: 100%;
   background: $color-primary;
   color: $color-secondary;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: $primary-font;
 }
 
 @mixin gradient-text($angle, $color1, $color2) {
