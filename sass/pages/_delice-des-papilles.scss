@@ -15,18 +15,16 @@
     @include menu-pages($delice-bg, black, $delice-font, $default-font);
     h3 {
       @include gradient-text(45deg, $delice-color1, $delice-color2);
-      margin: 20px 10px 40px;
+      margin: 25px 10px 45px;
       font-size: 4rem;
       font-style: italic;
     }
     h4 {
       font-size: 1.1rem;
       font-weight: normal;
-      // margin: 45px 0 20px;
       @include underline;
     }
     .break {
-      margin-top: 20px;
       clip-path: $delice-path;
       &--1 {
         background-color: $delice-color1;
@@ -39,7 +37,6 @@
       }
     }
     ul {
-      font-size: 0.9rem;
       margin: 25px 80px 30px;
       line-height: 0.6rem;
     }

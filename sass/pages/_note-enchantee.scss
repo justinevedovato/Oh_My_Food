@@ -26,6 +26,7 @@
     }
     h4 {
       font-size: 1.5rem;
+      font-weight: bold;
       margin: 0;
       @include underline;
     }
@@ -34,13 +35,6 @@
       height: 90px;
       clip-path: $note-path;
       background-color: currentColor;
-      &--left {
-        margin-right: auto;
-      }
-      &--right {
-        margin-left: auto;
-        transform: scale(-1, 1);
-      }
     }
     ul {
       font-size: 1rem;

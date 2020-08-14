@@ -187,7 +187,7 @@ body > footer a:hover {
   margin: 0 2px;
   position: relative;
   opacity: 0;
-  animation: blink 1.3s ease infinite both;
+  animation: blink 1.3s ease infinite;
 }
 .btn .dots span:nth-of-type(2) {
   animation-delay: 0.2s;
@@ -261,7 +261,7 @@ body > footer a:hover {
 }
 .note__page__break {
   height: 40px;
-  margin: 30px 0;
+  margin: 15px 0 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -269,6 +269,7 @@ body > footer a:hover {
 .note__page .break {
   width: 240px;
   height: 150px;
+  margin: 0;
 }
 .note__page .break--right {
   transform: scale(-1, 1);
@@ -282,10 +283,11 @@ body > footer a:hover {
 .note__page h4 {
   font-family: "Segoe Print", "Merienda", Verdana, sans-serif;
   font-weight: normal;
-  margin: 45px 0 20px;
+  margin: 0;
   font-size: 1rem;
 }
 .note__page ul {
+  font-size: 0.9rem;
   padding: 0;
   font-family: "Segoe Print", "Merienda", Verdana, sans-serif;
 }
@@ -293,6 +295,7 @@ body > footer a:hover {
   list-style-type: none;
   display: flex;
   align-items: baseline;
+  margin: 0;
 }
 .note__page span {
   margin-left: auto;
@@ -312,6 +315,7 @@ body > footer a:hover {
 }
 .note__page h4 {
   font-size: 1.5rem;
+  font-weight: bold;
   margin: 0;
   position: relative;
 }
@@ -323,11 +327,9 @@ body > footer a:hover {
   bottom: 0;
   left: 0;
   background-color: currentColor;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .note__page h4:hover:before {
-  visibility: visible;
   width: 100%;
 }
 .note__page .break {
@@ -335,13 +337,6 @@ body > footer a:hover {
   height: 90px;
   clip-path: polygon(2% 49%, 10% 47%, 16% 47%, 21% 47%, 28% 47%, 33% 47%, 37% 47%, 41% 46%, 45% 46%, 50% 46%, 55% 46%, 59% 46%, 64% 45%, 69% 45%, 74% 46%, 78% 46%, 82% 45%, 88% 45%, 91% 44%, 93% 45%, 96% 45%, 100% 45%, 100% 47%, 99% 49%, 98% 50%, 96% 50%, 93% 50%, 90% 49%, 87% 49%, 84% 50%, 81% 51%, 78% 51%, 76% 50%, 72% 50%, 70% 50%, 66% 51%, 64% 50%, 61% 50%, 59% 50%, 54% 50%, 49% 51%, 46% 51%, 43% 51%, 39% 51%, 36% 51%, 33% 50%, 30% 51%, 27% 51%, 24% 51%, 21% 51%, 18% 51%, 16% 50%, 14% 51%, 11% 51%, 10% 51%, 8% 51%, 6% 51%, 4% 50%, 3% 50%, 1% 50%);
   background-color: currentColor;
-}
-.note__page .break--left {
-  margin-right: auto;
-}
-.note__page .break--right {
-  margin-left: auto;
-  transform: scale(-1, 1);
 }
 .note__page ul {
   font-size: 1rem;
@@ -362,7 +357,6 @@ body > footer a:hover {
 }
 @media (max-width: 850px) {
   .note__page {
-    box-shadow: 0px 0px 15px 4px #e5e3e2;
     padding: 15px;
     width: 500px;
     min-height: 800px;
@@ -386,6 +380,9 @@ body > footer a:hover {
   .note__page .break {
     width: 130px;
     height: 90px;
+  }
+  .note__page__break {
+    margin: 20px 0 10px;
   }
   .note__page .fas {
     font-size: 3rem;
@@ -488,7 +485,7 @@ body > footer a:hover {
 }
 .chic__page__break {
   height: 40px;
-  margin: 30px 0;
+  margin: 15px 0 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -496,6 +493,7 @@ body > footer a:hover {
 .chic__page .break {
   width: 240px;
   height: 150px;
+  margin: 0;
 }
 .chic__page .break--right {
   transform: scale(-1, 1);
@@ -509,10 +507,11 @@ body > footer a:hover {
 .chic__page h4 {
   font-family: "Times New Roman", Times, serif;
   font-weight: normal;
-  margin: 45px 0 20px;
+  margin: 0;
   font-size: 1rem;
 }
 .chic__page ul {
+  font-size: 0.9rem;
   padding: 0;
   font-family: "Times New Roman", Times, serif;
 }
@@ -520,6 +519,7 @@ body > footer a:hover {
   list-style-type: none;
   display: flex;
   align-items: baseline;
+  margin: 0;
 }
 .chic__page span {
   margin-left: auto;
@@ -537,7 +537,6 @@ body > footer a:hover {
   font-weight: bold;
   font-size: 1.2rem;
   letter-spacing: 0.05rem;
-  margin-top: 20px;
   position: relative;
 }
 .chic__page h4:before {
@@ -548,11 +547,9 @@ body > footer a:hover {
   bottom: 0;
   left: 0;
   background-color: currentColor;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .chic__page h4:hover:before {
-  visibility: visible;
   width: 100%;
 }
 .chic__page .break {
@@ -561,9 +558,9 @@ body > footer a:hover {
   background-color: currentColor;
 }
 .chic__page ul {
-  font-size: 1.1rem;
-  margin: 20px 70px;
-  line-height: 0.7rem;
+  font-size: 1.2rem;
+  margin: 0 70px 40px;
+  line-height: 0.6rem;
 }
 .chic__page--2 {
   color: #a56799;
@@ -573,7 +570,6 @@ body > footer a:hover {
 }
 @media (max-width: 850px) {
   .chic__page {
-    box-shadow: 0px 0px 15px 4px #e5e3e2;
     padding: 15px;
     width: 500px;
     min-height: 800px;
@@ -597,6 +593,9 @@ body > footer a:hover {
   .chic__page .break {
     width: 130px;
     height: 90px;
+  }
+  .chic__page__break {
+    margin: 20px 0 10px;
   }
   .chic__page ul {
     font-size: 0.9rem;
@@ -663,7 +662,7 @@ body > footer a:hover {
 }
 
 .delice {
-  background: #f8f8f8;
+  background: #ededf1;
   color: #228bee;
 }
 .delice h3 {
@@ -687,7 +686,7 @@ body > footer a:hover {
   font-style: italic;
 }
 .delice__page {
-  background: #f8f8f8;
+  background: #ededf1;
   color: black;
   box-shadow: 0px 0px 20px 4px #e5e3e2;
   text-align: center;
@@ -704,7 +703,7 @@ body > footer a:hover {
 }
 .delice__page__break {
   height: 40px;
-  margin: 30px 0;
+  margin: 15px 0 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -712,6 +711,7 @@ body > footer a:hover {
 .delice__page .break {
   width: 240px;
   height: 150px;
+  margin: 0;
 }
 .delice__page .break--right {
   transform: scale(-1, 1);
@@ -725,10 +725,11 @@ body > footer a:hover {
 .delice__page h4 {
   font-family: "Segoe Print", "Merienda", Verdana, sans-serif;
   font-weight: normal;
-  margin: 45px 0 20px;
+  margin: 0;
   font-size: 1rem;
 }
 .delice__page ul {
+  font-size: 0.9rem;
   padding: 0;
   font-family: "Segoe Print", "Merienda", Verdana, sans-serif;
 }
@@ -736,6 +737,7 @@ body > footer a:hover {
   list-style-type: none;
   display: flex;
   align-items: baseline;
+  margin: 0;
 }
 .delice__page span {
   margin-left: auto;
@@ -746,7 +748,7 @@ body > footer a:hover {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   display: inline-block;
-  margin: 20px 10px 40px;
+  margin: 25px 10px 45px;
   font-size: 4rem;
   font-style: italic;
 }
@@ -763,15 +765,12 @@ body > footer a:hover {
   bottom: 0;
   left: 0;
   background-color: currentColor;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .delice__page h4:hover:before {
-  visibility: visible;
   width: 100%;
 }
 .delice__page .break {
-  margin-top: 20px;
   clip-path: polygon(3% 44%, 4% 47%, 5% 48%, 7% 49%, 93% 50%, 96% 54%, 8% 53%, 5% 52%, 3% 50%, 3% 48%, 2% 44%);
 }
 .delice__page .break--1 {
@@ -784,7 +783,6 @@ body > footer a:hover {
   background-color: #228bee;
 }
 .delice__page ul {
-  font-size: 0.9rem;
   margin: 25px 80px 30px;
   line-height: 0.6rem;
 }
@@ -793,7 +791,6 @@ body > footer a:hover {
 }
 @media (max-width: 850px) {
   .delice__page {
-    box-shadow: 0px 0px 15px 4px #e5e3e2;
     padding: 15px;
     width: 500px;
     min-height: 800px;
@@ -817,6 +814,9 @@ body > footer a:hover {
   .delice__page .break {
     width: 130px;
     height: 90px;
+  }
+  .delice__page__break {
+    margin: 20px 0 10px;
   }
   .delice__page h3 {
     font-size: 3rem;
@@ -867,7 +867,7 @@ body > footer a:hover {
 
 .palette {
   background: #fdfffd;
-  color: #2e722a;
+  color: #3d923a;
 }
 .palette h3 {
   font-family: "Kaushan Script", cursive;
@@ -882,14 +882,14 @@ body > footer a:hover {
   margin: 10px 0;
 }
 .palette h3 {
-  color: #2e722a;
-  background: linear-gradient(70deg, #2e722a, #bcff64);
+  color: #3d923a;
+  background: linear-gradient(70deg, #3d923a, #bcff64);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   display: inline-block;
 }
 .palette p {
-  color: #45aa3f;
+  color: #5ebe5b;
 }
 .palette__page {
   background: #fdfffd;
@@ -909,7 +909,7 @@ body > footer a:hover {
 }
 .palette__page__break {
   height: 40px;
-  margin: 30px 0;
+  margin: 15px 0 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -917,6 +917,7 @@ body > footer a:hover {
 .palette__page .break {
   width: 240px;
   height: 150px;
+  margin: 0;
 }
 .palette__page .break--right {
   transform: scale(-1, 1);
@@ -930,10 +931,11 @@ body > footer a:hover {
 .palette__page h4 {
   font-family: "Segoe Print", "Merienda", Verdana, sans-serif;
   font-weight: normal;
-  margin: 45px 0 20px;
+  margin: 0;
   font-size: 1rem;
 }
 .palette__page ul {
+  font-size: 0.9rem;
   padding: 0;
   font-family: "Segoe Print", "Merienda", Verdana, sans-serif;
 }
@@ -941,23 +943,24 @@ body > footer a:hover {
   list-style-type: none;
   display: flex;
   align-items: baseline;
+  margin: 0;
 }
 .palette__page span {
   margin-left: auto;
 }
 .palette__page h3 {
-  color: #2e722a;
-  background: linear-gradient(70deg, #2e722a, #bcff64);
+  color: #3d923a;
+  background: linear-gradient(110deg, #3d923a, #bcff64);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   display: inline-block;
   margin: 40px 10px;
   font-size: 3.5rem;
-  font-style: italic;
   width: auto;
 }
 .palette__page h4 {
   position: relative;
+  font-size: 1.1rem;
 }
 .palette__page h4:before {
   content: "";
@@ -967,20 +970,16 @@ body > footer a:hover {
   bottom: 0;
   left: 0;
   background-color: currentColor;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 .palette__page h4:hover:before {
-  visibility: visible;
   width: 100%;
 }
 .palette__page .break {
-  margin-top: 20px;
   clip-path: polygon(1% 49%, 11% 49%, 18% 49%, 24% 50%, 31% 50%, 42% 50%, 51% 50%, 58% 51%, 68% 51%, 75% 51%, 79% 51%, 85% 51%, 90% 51%, 94% 52%, 98% 53%, 96% 54%, 89% 55%, 85% 55%, 82% 55%, 76% 55%, 70% 54%, 63% 55%, 58% 55%, 52% 55%, 43% 54%, 37% 54%, 34% 54%, 31% 54%, 27% 54%, 23% 54%, 20% 54%, 17% 54%, 13% 53%, 10% 53%, 7% 53%, 4% 53%, 3% 52%, 1% 51%);
-  background: linear-gradient(45deg, #2e722a, #bcff64);
+  background: linear-gradient(45deg, #3d923a, #bcff64);
 }
 .palette__page ul {
-  font-size: 0.9rem;
   margin: 25px 70px 30px;
   line-height: 0.6rem;
 }
@@ -989,7 +988,6 @@ body > footer a:hover {
 }
 @media (max-width: 850px) {
   .palette__page {
-    box-shadow: 0px 0px 15px 4px #e5e3e2;
     padding: 15px;
     width: 500px;
     min-height: 800px;
@@ -1013,6 +1011,9 @@ body > footer a:hover {
   .palette__page .break {
     width: 130px;
     height: 90px;
+  }
+  .palette__page__break {
+    margin: 20px 0 10px;
   }
 }
 @media (max-width: 550px) {

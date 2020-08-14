@@ -16,23 +16,21 @@
   &__page {
     @include menu-pages($palette-bg, black, $palette-font, $default-font);
     h3 {
-      @include gradient-text(70deg, $palette-color1, $palette-color2);
+      @include gradient-text(110deg, $palette-color1, $palette-color2);
       margin: 40px 10px;
       font-size: 3.5rem;
-      font-style: italic;
       width: auto;
     }
     h4 {
       @include underline;
+      font-size: 1.1rem;
     }
     .break {
-      margin-top: 20px;
       clip-path: $palette-path;
       background: linear-gradient(45deg, $palette-color1, $palette-color2);
     }
 
     ul {
-      font-size: 0.9rem;
       margin: 25px 70px 30px;
       line-height: 0.6rem;
     }

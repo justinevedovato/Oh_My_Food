@@ -13,6 +13,7 @@
   display: inline-block;
 }
 
+// Vignettes des menus sur la page d'accueil
 @mixin menu-vignettes($bg, $color, $font1, $font2) {
   background: $bg;
   color: $color;
@@ -30,6 +31,7 @@
   }
 }
 
+// Pages pour chaque menu
 @mixin menu-pages($bg, $color, $font1, $font2) {
   background: $bg;
   color: $color;
@@ -47,7 +49,7 @@
   }
   &__break {
     height: 40px;
-    margin: 30px 0;
+    margin: 15px 0 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,6 +57,7 @@
   .break {
     width: 240px;
     height: 150px;
+    margin: 0;
     &--right {
       transform: scale(-1, 1);
     }
@@ -68,10 +71,11 @@
   h4 {
     font-family: $font2;
     font-weight: normal;
-    margin: 45px 0 20px;
+    margin: 0;
     font-size: 1rem;
   }
   ul {
+    font-size: 0.9rem;
     padding: 0;
     font-family: $font2;
   }
@@ -79,15 +83,16 @@
     list-style-type: none;
     display: flex;
     align-items: baseline;
+    margin: 0;
   }
   span {
     margin-left: auto;
   }
 }
 
+// Version responsive des pages menu, plus petit
 @mixin responsive-smaller {
   &__page {
-    box-shadow: 0px 0px 15px 4px $color-shadow;
     padding: 15px;
     width: 500px;
     min-height: 800px;
@@ -111,9 +116,13 @@
       width: 130px;
       height: 90px;
     }
+    &__break {
+      margin: 20px 0 10px;
+    }
   }
 }
 
+// Version responsive des pages menu pour mobile
 @mixin responsive-mobile {
   &__page {
     display: flex;
@@ -164,11 +173,9 @@
     bottom: 0;
     left: 0;
     background-color: currentColor;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
   &:hover:before {
-    visibility: visible;
     width: 100%;
   }
 }

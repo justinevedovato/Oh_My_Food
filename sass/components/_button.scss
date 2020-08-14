@@ -24,7 +24,7 @@
       margin: 0 2px;
       position: relative;
       opacity: 0;
-      animation: blink 1.3s ease infinite both;
+      animation: blink 1.3s ease infinite;
       &:nth-of-type(2) {
         animation-delay: 0.2s;
       }

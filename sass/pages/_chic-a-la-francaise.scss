@@ -20,7 +20,6 @@
       font-weight: bold;
       font-size: 1.2rem;
       letter-spacing: 0.05rem;
-      margin-top: 20px;
       @include underline;
     }
     .break {
@@ -29,9 +28,9 @@
       background-color: currentColor;
     }
     ul {
-      font-size: 1.1rem;
-      margin: 20px 70px;
-      line-height: 0.7rem;
+      font-size: 1.2rem;
+      margin: 0 70px 40px;
+      line-height: 0.6rem;
     }
     &--2 {
       color: $chic-color2;
