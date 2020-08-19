@@ -1,12 +1,11 @@
 .btn {
+  // Section "prochainement"
   @include footer-header;
   display: inline-flex;
   font-size: 1.3rem;
   width: 260px;
   height: 45px;
   margin: 20px 0 150px;
-  border: none;
-  outline: none;
   border-radius: 8px;
   overflow: hidden;
   p {

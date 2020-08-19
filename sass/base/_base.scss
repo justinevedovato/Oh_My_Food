@@ -19,6 +19,7 @@ body {
 }
 
 .menu {
+  // div regroupant tous les menus
   display: flex;
   margin-top: 60px;
   width: 1500px;
@@ -36,6 +37,7 @@ body {
     margin-top: 5px;
   }
   &__box {
+    // vignette de menu
     display: inline-block;
     overflow: hidden;
     width: 300px;
@@ -62,6 +64,7 @@ body {
 }
 
 .wrapper {
+  // Partie cliquable de la vignette, contient le texte
   cursor: pointer;
   display: flex;
   flex-direction: column;

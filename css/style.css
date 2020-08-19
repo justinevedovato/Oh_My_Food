@@ -119,26 +119,23 @@ body > footer {
   position: fixed;
   bottom: 0px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-top: 20px;
 }
 body > footer a {
   color: inherit;
   text-decoration: inherit;
   margin: 20px;
   font-size: 1.2rem;
-  font-weight: 400;
 }
 body > footer a:hover {
   animation: wiggle 0.2s cubic-bezier(0.3, 1, 0.6, 0.8) 3;
 }
 @keyframes wiggle {
   25% {
-    transform: rotate(-5deg);
+    transform: rotate(-4deg);
   }
   75% {
-    transform: rotate(5deg);
+    transform: rotate(4deg);
   }
 }
 @media (max-width: 850px) {
@@ -167,8 +164,6 @@ body > footer a:hover {
   width: 260px;
   height: 45px;
   margin: 20px 0 150px;
-  border: none;
-  outline: none;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -229,12 +224,11 @@ body > footer a:hover {
   font-size: 2rem;
   margin: 10px 0;
 }
-.note .fas {
+.note .fas::before {
   color: #f74651;
   background: linear-gradient(45deg, #f74651, #fa9976);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  display: inline-block;
   font-size: 2.8rem;
   padding: 5px;
   margin: 0;
@@ -242,6 +236,7 @@ body > footer a:hover {
 .note p {
   text-transform: uppercase;
   font-weight: bold;
+  margin: 0;
 }
 .note__page {
   background: #fcdfdb;
@@ -305,7 +300,6 @@ body > footer a:hover {
   background: linear-gradient(45deg, #f74651, #fa9976);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  display: inline-block;
   font-size: 4rem;
   margin: 15px 0 5px;
   padding: 5px;
@@ -462,7 +456,6 @@ body > footer a:hover {
   background: linear-gradient(45deg, #d8801b, #783aff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  display: inline-block;
 }
 .chic p {
   font-weight: bold;
@@ -529,7 +522,6 @@ body > footer a:hover {
   background: linear-gradient(45deg, #d8801b, #783aff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  display: inline-block;
   margin: 40px 0 70px;
   font-size: 3rem;
 }
@@ -682,7 +674,6 @@ body > footer a:hover {
   background: linear-gradient(70deg, #0222c5, #228bee);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  display: inline-block;
   font-style: italic;
 }
 .delice__page {
@@ -747,7 +738,6 @@ body > footer a:hover {
   background: linear-gradient(45deg, #0222c5, #228bee);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  display: inline-block;
   margin: 25px 10px 45px;
   font-size: 4rem;
   font-style: italic;
@@ -886,7 +876,6 @@ body > footer a:hover {
   background: linear-gradient(70deg, #3d923a, #bcff64);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  display: inline-block;
 }
 .palette p {
   color: #5ebe5b;
@@ -953,7 +942,6 @@ body > footer a:hover {
   background: linear-gradient(110deg, #3d923a, #bcff64);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  display: inline-block;
   margin: 40px 10px;
   font-size: 3.5rem;
   width: auto;

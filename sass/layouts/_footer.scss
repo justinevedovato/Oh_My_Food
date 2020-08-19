@@ -3,15 +3,12 @@ body > footer {
   position: fixed;
   bottom: 0px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-top: 20px;
   a {
     color: inherit;
     text-decoration: inherit;
     margin: 20px;
     font-size: 1.2rem;
-    font-weight: 400;
 
     &:hover {
       animation: wiggle 0.2s cubic-bezier(0.3, 1, 0.6, 0.8) 3;
@@ -19,11 +16,11 @@ body > footer {
 
     @keyframes wiggle {
       25% {
-        transform: rotate(-5deg);
+        transform: rotate(-4deg);
       }
 
       75% {
-        transform: rotate(5deg);
+        transform: rotate(4deg);
       }
     }
   }

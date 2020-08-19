@@ -1,7 +1,7 @@
 .note {
   // Vignette Menu
   @include menu-vignettes($note-bg, $note-color, $note-font, $default-font);
-  .fas {
+  .fas::before {
     @include gradient-text(45deg, $note-icon1, $note-icon2);
     font-size: 2.8rem;
     padding: 5px;
@@ -10,6 +10,7 @@
   p {
     text-transform: uppercase;
     font-weight: bold;
+    margin: 0;
   }
 
   // Page Menu
