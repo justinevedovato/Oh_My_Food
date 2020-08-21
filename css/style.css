@@ -49,7 +49,6 @@ body {
   }
 }
 .menu__box {
-  display: inline-block;
   overflow: hidden;
   width: 300px;
   height: 450px;
@@ -159,7 +158,7 @@ body > footer a:hover {
   background: #549c84;
   color: #fdcb46;
   font-family: "Montserrat", Arial, sans-serif;
-  display: inline-flex;
+  display: flex;
   font-size: 1.3rem;
   width: 260px;
   height: 45px;
@@ -178,10 +177,8 @@ body > footer a:hover {
   line-height: 1rem;
 }
 .btn .dots span {
-  display: inline;
   margin: 0 2px;
   position: relative;
-  opacity: 0;
   animation: blink 1.3s ease infinite;
 }
 .btn .dots span:nth-of-type(2) {
